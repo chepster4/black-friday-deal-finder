@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FridayVault — Black Friday Deal Finder 2026</title>
+<meta name="description" content="36 real Black Friday deals, checked 27 November 2026, with sale price, usual price, discount and an honest is-it-really-a-deal verdict.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">FV</span>
+      <div>
+        <h1>FridayVault</h1>
+        <p class="tagline">Black Friday deals, checked by hand — not by hype.</p>
+      </div>
+    </div>
+    <p class="checked-note">All 36 prices checked <strong>27 Nov 2026, 14:00 WIB</strong> (07:00 UTC) at the named store or in a deals source naming the store. Prices can move — tap the store link to confirm before you buy.</p>
+  </div>
+</header>
+
+<main>
+  <section class="stats" id="stats" aria-label="Deal summary"></section>
+
+  <section class="controls" aria-label="Search and filters">
+    <label class="search-box">
+      <span class="label-text">Search deals</span>
+      <input id="search" type="search" placeholder="Try “AirPods”, “TV”, “Dyson”… " autocomplete="off">
+    </label>
+    <label>
+      <span class="label-text">Category</span>
+      <select id="filter-category"></select>
+    </label>
+    <label>
+      <span class="label-text">Store</span>
+      <select id="filter-store"></select>
+    </label>
+    <label>
+      <span class="label-text">Minimum discount</span>
+      <select id="filter-discount">
+        <option value="0">Any discount</option>
+        <option value="20">20% off or more</option>
+        <option value="30">30% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+        <option value="60">60% off or more</option>
+      </select>
+    </label>
+    <label>
+      <span class="label-text">Sort by</span>
+      <select id="sort">
+        <option value="discount">Biggest discount first</option>
+        <option value="verdict">Best verdict first</option>
+        <option value="price-asc">Lowest sale price first</option>
+        <option value="price-desc">Highest sale price first</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </label>
+  </section>
+
+  <p class="result-count" id="result-count" role="status"></p>
+
+  <section class="compare" id="compare" aria-label="Same product, two stores"></section>
+
+  <section class="deal-grid" id="deal-grid" aria-label="Deals"></section>
+
+  <section class="how" aria-label="How we check a deal">
+    <h2>How we check a deal</h2>
+    <ol>
+      <li><strong>Read the price</strong> at the store itself, or in a deals roundup that names the store.</li>
+      <li><strong>Check the maths:</strong> the discount shown is always (usual − sale) ÷ usual.</li>
+      <li><strong>Give an honest verdict:</strong> NEW LOW means the lowest price we could find evidence for; STRONG DEAL is a big cut on a rarely-discounted product; ROUTINE SALE is the usual seasonal cut; INFLATED means the “usual” price looks pumped up.</li>
+      <li><strong>Note the catch:</strong> where a store shows a “comparable value” instead of a past selling price, we say so — judge those by the sale price alone.</li>
+    </ol>
+    <p class="honesty">Amazon raised the list prices of some Echo, Fire TV and Kindle devices earlier this year, so their discounts are measured against a higher starting price. That is noted on those cards.</p>
+  </section>
+</main>
+
+<footer>
+  <p>FridayVault is an independent deal finder built for the make.fun Black Friday bounty. Prices checked 27 Nov 2026, 14:00 WIB. Store links go to the named store; FridayVault earns nothing from them.</p>
+  <p><a href="https://make.fun/competitions/black-friday-deal-finder-01">Black Friday Deal Finder bounty on make.fun</a></p>
+</footer>
+
+<dialog id="deal-dialog" class="deal-dialog">
+  <div id="dialog-body"></div>
+  <form method="dialog"><button class="close-btn">Close</button></form>
+</dialog>
+</body>
+</html>
